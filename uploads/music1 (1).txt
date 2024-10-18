@@ -1,0 +1,5 @@
+4
+8593 # 0.5 # 1.5  // Flecha arriba
+8595 # 1.6 # 2.0  // Flecha abajo
+8592 # 2.1 # 2.5  // Flecha izquierda
+8594 # 2.6 # 3.0  // Flecha derecha

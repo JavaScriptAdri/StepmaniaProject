@@ -1,0 +1,92 @@
+body {
+    background-image: url('menu.gif');
+    background-size: 220%;
+    width: 600px;
+    height: 650px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.menu {
+    font-family: 'Press Start 2P'; 
+    padding: 20px;
+    width: 300px;
+}
+
+.menu h1 {
+    font-family: 'Press Start 2P'; 
+    margin-bottom: 30px;
+}
+
+.menu a {
+    font-family: 'Press Start 2P'; 
+    font-size: 23px;
+    display: block;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(100deg, #ec0000, #e1ff00);
+    text-decoration: none;
+    margin: 20px 0;
+    padding: 10px;
+    border: 4px solid transparent;
+    border-image: linear-gradient(to bottom, #e1ff00 0%, #ec0000 100%) 1;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    font-family: 'Press Start 2P'; 
+    font-size: 23px;
+    background-color: white;
+    color: rgb(0, 0, 0);
+}
+
+.menu button {
+    font-family: 'Press Start 2P'; 
+    font-size: 23px;
+    display: block;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(100deg, #ec0000, #e1ff00);
+    text-decoration: none;
+    margin: 20px 0;
+    border: 4px solid transparent;
+    border-image: linear-gradient(to bottom, #e1ff00 0%, #ec0000 100%) 1;
+    transition: background-color 0.3s;
+    padding: 10px;
+    width: 300px;
+}
+
+.menu button:hover {
+    font-family: 'Press Start 2P'; 
+    font-size: 23px;
+    background-color: white;
+    color: rgb(0, 0, 0);
+}
+
+@font-face {
+    font-family: "Codehack";
+    src: url('Nightmare Codehack.otf');
+    src: url('Nightmare Codehack.otf') format('embedded-opentype'),
+         url('Nightmare Codehack.otf') format('woff2'),
+         url('Nightmare Codehack.otf') format('woff'),
+         url('Nightmare Codehack.otf') format('truetype');
+}
+
+@font-face {
+    font-family: "neon";
+    src: url('neon_pixel-7.ttf');
+    src: url('neon_pixel-7.ttf') format('embedded-opentype'),
+         url('neon_pixel-7.ttf') format('woff2'),
+         url('neon_pixel-7.ttf') format('woff'),
+         url('neon_pixel-7.ttf') format('truetype');
+}
+
+
+
+@font-face {
+    font-family: "luigi";
+    src: url('SuperPlumberBrothers-y00V.ttf');
+    src: url('SuperPlumberBrothers-y00V.ttf') format('embedded-opentype'),
+         url('SuperPlumberBrothers-y00V.ttf') format('woff2'),
+         url('SuperPlumberBrothers-y00V.ttf') format('woff'),
+         url('SuperPlumberBrothers-y00V.ttf') format('truetype');
+}
+

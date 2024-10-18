@@ -1,0 +1,80 @@
+body {
+    font-family: 'Press Start 2P'; /* Fuente retro */
+    background-color: #000;
+    background-image: url('zelda.gif'); background-size: 125%;
+    background-repeat: no-repeat;
+   
+    color: #0f0; /* Color de texto verde */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+.scoreboard {
+    margin: 50px auto;
+    padding: 20px;
+    border: 5px solid rgb(0, 255, 8); /* Borde rojo */
+    width: 500px;
+    background-color: rgba(34, 34, 34, 0.9); /* Fondo oscuro con transparencia */
+    box-shadow: 0 0 20px rgb(0, 255, 8);
+    border-radius: 10px; /* Esquinas redondeadas */
+}
+
+h1 {
+    font-size: 2em; /* Tamaño de fuente más grande */
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    font-family: 'Press Start 2P'; 
+    padding: 10px;
+    border: 1px solid rgb(0, 255, 8); /* Bordes rojos */
+    color: #0f0; /* Color de texto verde */
+}
+
+th {
+    background-color: #444;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(34, 34, 34, 0.7); /* Fondo más claro para filas pares */
+}
+
+tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro para filas impares */
+}
+
+.home-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: linear-gradient(100deg, #ec0000, #e1ff00); /* Degradado */
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: 'Press Start 2P', cursive;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.home-button:hover {
+    background-color: #fff;
+    color: #f00;
+    transform: scale(1.05);
+}
+
+/* Estilos para el contenedor de puntuaciones y la carga */
+.loading {
+    font-size: 1.2em;
+    color: #0f0;
+    margin-top: 20px;
+}

@@ -1,0 +1,206 @@
+body {
+    font-family: 'Press Start 2P';
+    background-image: url('menu.gif');
+    background-size: 220%;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+.logo-container {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+select, input, textarea {
+    font-family: 'Press Start 2P';
+    border: 2px solid #0f0;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #0f0;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    font-family: 'Press Start 2P';
+    padding: 10px;
+    font-size: 1.2em;
+    background: linear-gradient(100deg, #ec0000, #e1ff00);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+
+#songSelect {
+    font-size: 0.9em;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.playlist {
+    max-height: 400px;
+    overflow-y: scroll;
+    padding: 20px;
+}
+
+.song-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.song-info {
+    margin-left: 15px;
+    text-align: left;
+    color: #0f0;
+}
+
+.song-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 2px solid #0f0;
+}
+
+.delete-btn, .edit-btn {
+    color: #ffffff; /* Color del texto */
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px 10px;
+    background: linear-gradient(100deg, #ec0000, #e1ff00);
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover, .edit-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.play-button {
+    font-family: 'Press Start 2P';
+    margin: 0 5px;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    background: linear-gradient(100deg, #ec0000, #e1ff00);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.play-button:hover {
+    background-color: white;
+    color: rgb(0, 0, 0);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.upload-form {
+    flex: 0 0 300px; /* Llargada fixa per al formulari de pujada */
+    margin-right: 20px; /* Espai entre el formulari i la playlist */
+}
+
+.playlist {
+    flex: 1; /* La playlist ocuparà l'espai restant */
+    max-height: 600px; /* Altura màxima per fer scroll */
+    overflow-y: auto; /* Afegir scroll si el contingut supera la altura màxima */
+    background-color: rgba(0, 0, 0, 0.7); /* Fons per a la playlist */
+    border-radius: 10px; /* Bordes arrodonits */
+    padding: 20px; /* Espai interior */
+    margin-left: 22px; /* Espacio entre formulario y playlist */
+}
+
+.song {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Alinear verticalmente el contenido */
+    justify-content: space-between; /* Espacio entre elementos */
+    height: 100px; /* Altura consistente */
+    margin-bottom: 15px; /* Espai entre cançons */
+    border: 1px solid #0f0; /* Borde per a cada cançó */
+    padding: 10px; /* Espai interior de cada cançó */
+    border-radius: 5px; /* Bordes arrodonits per a cada cançó */
+}
+
+.action-buttons {
+    display: flex; /* Usar flexbox para alinear los botones */
+    gap: 10px; /* Espacio entre los botones */
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: #0f0;
+}
+
+button {
+    font-family: 'Press Start 2P';
+    padding: 5px 10px;
+    margin-top: 5px;
+}
+
+audio {
+    width: 100%;
+}
+
+.upload-form {
+    flex: 0 0 300px; /* Llargada fixa per al formulari de pujada */
+    margin-right: 20px;
+    align-self: flex-start; /* Alinear el formulari a l'inici per evitar desplaçaments */
+}
+
+.playlist {
+    flex: 1;
+    max-height: 600px;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 0; /* Elimina qualsevol espai superior extra */
+}
+
+.home-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: linear-gradient(100deg, #ec0000, #e1ff00); /* Degradado */
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: 'Press Start 2P', cursive;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.home-button:hover {
+    background-color: #fff;
+    color: rgb(0, 0, 0);
+}

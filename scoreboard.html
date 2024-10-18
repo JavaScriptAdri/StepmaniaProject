@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoreboard</title>
+    <link rel="stylesheet" href="scoreboard.css">
+    <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet'>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Press Start 2P';
+            background-color: #000;
+            background-image: url('zelda.gif');
+            background-size: 125%;
+            background-repeat: no-repeat;
+            color: #0f0;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilos para la cabecera */
+        h1 {
+            margin: 20px 0;
+            font-size: 2.5em;
+            color: #0f0; /* Texto verde */
+            text-decoration: none; /* Sin subrayado */
+        }
+
+        /* Estilos para la tabla con borde fluorescente verde */
+        table {
+            margin: 20px auto;
+            width: 80%; /* Ajustar ancho de tabla */
+            border-collapse: collapse;
+            background-color: rgba(34, 34, 34, 0.9); /* Fondo oscuro con transparencia */
+            border: 5px solid rgb(0, 255, 8); /* Borde verde fluorescente */
+            box-shadow: 0 0 20px rgb(0, 255, 8); /* Efecto brillante */
+            border-radius: 10px; /* Esquinas redondeadas */
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid rgb(0, 255, 8);
+            color: #0f0;
+        }
+
+        th {
+            background-color: #444;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(34, 34, 34, 0.7);
+        }
+
+        tr:nth-child(odd) {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Estilos para el botón de Home en la esquina inferior izquierda */
+        .home-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background: linear-gradient(100deg, #ec0000, #e1ff00); /* Degradado */
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-family: 'Press Start 2P', cursive;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .home-button:hover {
+            background-color: #fff;
+            color: #f00;
+            transform: scale(1.05);
+        }
+
+        .loading {
+            font-size: 1.2em;
+            color: #0f0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Título centrado justo encima de la tabla -->
+    <h1>Classificació de jugadors</h1>
+    
+    <!-- Tabla de clasificaciones con borde fluorescente -->
+    <table id="scoreboard">
+        <thead>
+            <tr>
+                <th>Jugador</th>
+                <th>Puntuació</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <!-- Mensaje de carga -->
+    <div class="loading" id="loading">Carregant...</div>
+
+    <!-- Botón de "Home" en la parte inferior izquierda -->
+    <a href="index.html" class="home-button">Home</a>
+
+    <script>
+    // Funció per obtenir el valor d'una cookie
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+        return null;
+    }
+
+    // Funció per carregar i mostrar les puntuacions des de les cookies
+    function loadScores() {
+        const scoreboardBody = document.querySelector('#scoreboard tbody');
+        const loadingElement = document.getElementById('loading'); // Referència al missatge de "Carregant..."
+        const scoresCookie = getCookie('scores');
+        const scores = scoresCookie ? JSON.parse(scoresCookie) : [];
+        
+        // Ordenem les puntuacions de més alta a més baixa
+        scores.sort((a, b) => b.score - a.score);
+
+        // Buidem la taula abans d'afegir les dades
+        scoreboardBody.innerHTML = '';
+
+        // Afegim cada puntuació a la taula
+        scores.forEach(score => {
+            const row = document.createElement('tr');
+            const nameCell = document.createElement('td');
+            const scoreCell = document.createElement('td');
+
+            nameCell.textContent = score.name;
+            scoreCell.textContent = score.score;
+
+            row.appendChild(nameCell);
+            row.appendChild(scoreCell);
+            scoreboardBody.appendChild(row);
+        });
+
+        // Ocultem el missatge de "Carregant..." quan s'han carregat les puntuacions
+        loadingElement.style.display = 'none';
+    }
+
+    // Carreguem les puntuacions quan la pàgina es carrega
+    window.onload = loadScores;
+    </script>
+</body>
+</html>
+    

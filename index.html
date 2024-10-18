@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Stepmania</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
+</head>
+
+<body>
+  <div id="intro">
+    <video src="video.mp4" autoplay muted></video>
+  </div>
+
+  <img src="STEPMANIA-2-10-2024.png" alt="Stepmania Logo">
+  <div class="menu" tabindex="0"> <!-- Hacer el menú enfocables -->
+    <a href="game.php" onmouseover="playSound('game.mp3')" onfocus="playSound('game.mp3')">Start Game</a>
+    <a href="music.php" onmouseover="playSound('music.mp3')" onfocus="playSound('music.mp3')">Music</a>
+    <a href="scoreboard.html" onmouseover="playSound('ranking.mp3')" onfocus="playSound('ranking.mp3')">Ranking</a>
+    <button onclick="document.getElementById('sound1').play();">Play Music</button>
+  </div>
+  <audio id="audio-player" src="" style="display:none;"></audio>
+  <audio id="sound1" src="8bit-sample-69080.mp3" loop preload="auto"></audio>
+
+  <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "ghfj",
+        "artist": "ghk",
+        "file": "chiptune-alarm-clock-112869.mp3",
+        "url_game": "music1 (1).txt",
+        "duration": "62.66775",
+        "cover": "images (3).jpg"
+    },
+    {
+        "id": 2,
+        "title": "8bit",
+        "artist": "nilsu",
+        "file": "chiptune-alarm-clock-112869.mp3",
+        "url_game": "music1 (1).txt",
+        "duration": "62.66775",
+        "cover": "bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.u5.jpg"
+    }
+]

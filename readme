@@ -1,0 +1,6 @@
+El projecte és un videojoc de ritme inspirat en Stepmania, on els jugadors han de seguir
+les indicacions de les fletxes que apareixen a la pantalla. Els jugadors guanyen punts en prémer la
+tecla corresponent a la fletxa activa a temps, però també perden punts si premen la tecla
+equivocada. La música de fons és seleccionada a partir d'una llista de cançons disponibles, i el
+personatge del jugador es representa amb un GIF durant el joc. L'objectiu és obtenir la màxima
+puntuació possible mentre es gaudeix de la música i es desafien les habilitats de reflexos.

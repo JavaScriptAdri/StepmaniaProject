@@ -1,0 +1,154 @@
+/* Estilos generales */
+body {
+    font-family: 'Press Start 2P'; 
+    background-color: #1d1f21;
+    color: #c5c8c6;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+p {
+    font-size: 14px;
+    text-align: center;
+}
+
+a {
+    color: #8abeb7;
+    text-decoration: none;
+}
+
+
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Playlist */
+.playlist {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.character {
+    background-color: #282a2e;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out;
+}
+
+.character:hover {
+    transform: scale(1.05);
+}
+
+.character img {
+    width: 100px; /* Ancho fijo */
+    height: 100px; /* Alto fijo */
+    object-fit: cover; /* Mantener la proporción recortando si es necesario */
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+.character.selected {
+    border: 2px solid #de935f;
+    background-color: #373b41;
+    transform: scale(1.05);
+}
+
+/* Botones */
+button {
+    background-color: #8abeb7;
+    color: #1d1f21;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #81a2be;
+}
+
+button:active {
+    background-color: #5f819d;
+}
+
+.audio {
+    margin-top: 10px;
+    width: 100%;
+    outline: none;
+}
+
+ 
+
+h3{
+    width: 100%;
+    color: white;
+    line-height: px;
+    letter-spacing: 5px;
+    text-shadow: -2px 0 0 #fdff2a,
+    -4px 0 0 #df4a42,
+    2px 0 0 #91fcfe,
+    4px 0 0 #4405fc;
+animation: blink 1s steps(4, start) infinite;
+}
+
+
+            .title {
+                position: absolute;
+                top: 10px; /* Ajusta esta posición según sea necesario */
+                left: 50%;
+                transform: translate(-50%, 0);
+                height: 0px;
+                color: white;
+                width: 100%;
+                text-align: center;
+                margin: auto;
+                font-size: 20px;
+                line-height: px;
+                letter-spacing: 5px;
+                text-shadow: -2px 0 0 #fdff2a,
+                            -4px 0 0 #df4a42,
+                            2px 0 0 #91fcfe,
+                            4px 0 0 #4405fc;
+                animation: blink 1s steps(4, start) infinite;
+            }
+
+        @keyframes blink {
+            to {
+                visibility: hidden;
+            }
+        }
+        body {
+            font-family: 'Press Start 2P', cursive;
+            background: repeating-linear-gradient(
+                to bottom,
+                #0f0a1e,
+                #0f0a1e 2px,    
+                #0c0f25 2px,
+                #0c0f25 4px
+            );
+        }
+        
